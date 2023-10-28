@@ -17,6 +17,7 @@ class Advertisements(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User, verbose_name='пользователь', on_delete=models.CASCADE)
     image = models.ImageField('Изображение', upload_to="advertisements/")
+#  , default='/advertisements/static/img/adv.png'
 
     def __str__(self):
         return f"Advertisement(id={self.id}, title={self.title}, price={self.price})"

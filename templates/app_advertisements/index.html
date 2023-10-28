@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}Главная{% endblock %}
 
 {% block content %}
@@ -97,9 +99,10 @@
     <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
       <div class="row g-0">
         <div class="col-md-4">
+
           <a href="advertisement.html" class="nav-link">
-                         <img src="{% if adv.image %} {{ adv.image.url }} {% else %} {% static 'img/item.png' %} {% endif %}"
-                        class="img-fluid rounded-start" alt="Card title">
+                         <img src="{% if adv.image %}{{ adv.image.url }}{% else %}{% static 'img/adv.png' %}{% endif %}"
+                              class="img-fluid rounded-start" alt="Card title">
           </a>
         </div>
         <div class="col-md-8">
